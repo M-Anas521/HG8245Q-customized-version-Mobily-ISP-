@@ -1,0 +1,523 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 Last login: [REDACTED] Aug  7 21:20:48 on ttys000\
+muhammadanas@MacBook-Pro ~ % sudo minicom -D /dev/tty.SLAB_\
+\
+UBI: attaching mtd1 to ubi0\
+slave_paramA in flash, CRC:0xa3c1ca20, Magic1:0x0, Magic2:0x0, count:0, CommitedArea:0x0, Active:0x0, RunFlag:0x0\
+MAGIC1: 0x0, MAGIC2: 0x0, the magic is error!!!\
+slave_paramB in flash, CRC:0xa3c1ca20, Magic1:0x0, Magic2:0x0, count:0, CommitedArea:0x0, Active:0x0, RunFlag:0x0\
+MAGIC1: 0x0, MAGIC2: 0x0, the magic is error!!!\
+Slave struct initializtion success!!\
+Start from main system(0x0)!\
+CRC:0xa3c1ca20, Magic1:0x5a5a5a5a, Magic2:0xa5a5a5a5, count:0, CommitedArea:0x0, Active:0x0, RunFlag:0xffffffff\
+Main area (A) is OK!\
+CRC:0xe33b8857, Magic1:0x5a5a5a5a, Magic2:0xa5a5a5a5, count:0, CommitedArea:0x0, Active:0x0, RunFlag:0xffffffff\
+Bootcmd:ubi read 0x85c00000 kernelA 0x171e00; bootm 0x85c00054\
+BootArgs:noalign mem=242M console=ttyAMA1,115200 ubi.mtd=1 root=/dev/mtdblock11 rootfstype=squashfs mtdparts=hinand:0x100000(startcode),0xff00000(ubifs),-(re1\
+U-boot Start from NORMAL Mode!\
+\
+## Booting kernel from Legacy Image at 85c00054 ...\
+   Image Name:   Linux-2.6.34.10_sd5115v100_wr4.3\
+   Image Type:   ARM Linux Kernel Image (uncompressed)\
+   Data Size:    1514860 Bytes =  1.4 MB\
+   Load Address: 81000000\
+   Entry Point:  81000000\
+   Loading Kernel Image ... OK\
+OK\
+\
+Starting kernel ...\
+\
+Uncompressing Linux... done, booting the kernel.\
+Kernel Early-Debug on Level 0 \
+ V: 0xF8100000 P: 0x00010100 S: 0x00300000 T: 0\
+ V: 0xF8400000 P: 0x00010400 S: 0x00200000 T: 12\
+ V: 0xF8A00000 P: 0x00010A00 S: 0x00080000 T: 0\
+ V: 0xF9000000 P: 0x00011000 S: 0x05000000 T: 0\
+early_init      72      [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_map_io   219     [arch/arm/mach-sd5115h-v100f/core.c]\
+smp_init_cpus   163     [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+sd5115_gic_init_irq     88      [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_timer_init       467     [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_clocksource_init 447     [arch/arm/mach-sd5115h-v100f/core.c]\
+twd_base :\
+0xF8180600\
+sd5115_timer_init       487     [arch/arm/mach-sd5115h-v100f/core.c]\
+smp_prepare_cpus        174     [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+poke_milo       143     [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+boot_secondary  92      [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+write_pen_release       42      [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+platform_secondary_init 67      [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+write_pen_release       42      [arch/arm/mach-sd5115h-v100f/platsmp.c]\
+hi_kernel_wdt_init      207     [arch/arm/mach-sd5115h-v100f/hi_drv_wdt.c]\
+sd5115_init     310     [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_init     316     [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_init     316     [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_init     323     [arch/arm/mach-sd5115h-v100f/core.c]\
+sd5115_init     326     [arch/arm/mach-sd5115h-v100f/core.c]\
+Linux version 2.6.34.10_sd5115v100_wr4.3 (root@wuhci2lslx00801) (gcc version 4.4.6 (GCC) ) #1 SMP Fri Mar 6 12:04:25 CST 2015\
+CPU: ARMv7 Processor [414fc091] revision 1 (ARMv7), cr=10c53c7f\
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache\
+Machine: sd5115\
+Memory policy: ECC disabled, Data cache writealloc\
+sd5115 apb bus clk is 100000000\
+PERCPU: Embedded 7 pages/cpu @c05d8000 s4448 r8192 d16032 u65536\
+pcpu-alloc: s4448 r8192 d16032 u65536 alloc=16*4096\
+pcpu-alloc: [0] 0 [0] 1 \
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 61468\
+Kernel command line: noalign mem=242M console=ttyAMA1,115200 ubi.mtd=1 root=/dev/mtdblock11 rootfstype=squashfs mtdparts=hinand:0x100000(startcode),0xff000001\
+PID hash table entries: 1024 (order: 0, 4096 bytes)\
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)\
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)\
+Memory: 242MB = 242MB total\
+Memory: 241592k/241592k available, 6216k reserved, 0K highmem\
+Virtual kernel memory layout:\
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)\
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)\
+    DMA     : 0xffc00000 - 0xffe00000   (   2 MB)\
+    vmalloc : 0xcf800000 - 0xf8000000   ( 648 MB)\
+    lowmem  : 0xc0000000 - 0xcf200000   ( 242 MB)\
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)\
+      .init : 0xc0008000 - 0xc002b000   ( 140 kB)\
+      .text : 0xc002b000 - 0xc0396000   (3500 kB)\
+      .data : 0xc03aa000 - 0xc03c5340   ( 109 kB)\
+SLUB: Genslabs=11, HWalign=32, Order=0-3, MinObjects=0, CPUs=2, Nodes=1\
+Hierarchical RCU implementation.\
+RCU-based detection of stalled CPUs is enabled.\
+NR_IRQS:160\
+Calibrating delay loop... 1595.80 BogoMIPS (lpj=7979008)\
+Security Framework initialized\
+Mount-cache hash table entries: 512\
+CPU: Testing write buffer coherency: ok\
+Calibrating local timer... 199.94MHz.\
+Init trace_clock_cyc2ns: precalc_mult = 312500, precalc_shift = 8\
+CPU1: Booted secondary processor\
+Brought up 2 CPUs\
+SMP: Total of 2 processors activated (3188.32 BogoMIPS).\
+------------[ cut here ]------------\
+WARNING: at fs/proc/generic.c:598 proc_register+0x108/0x1dc()\
+proc_dir_entry '/proc/softlockup' already registered\
+Modules linked in:\
+[<c0031b30>] (unwind_backtrace+0x0/0xfc) from [<c0047f30>] (warn_slowpath_common+0x48/0x60)\
+[<c0047f30>] (warn_slowpath_common+0x48/0x60) from [<c0047f84>] (warn_slowpath_fmt+0x28/0x38)\
+[<c0047f84>] (warn_slowpath_fmt+0x28/0x38) from [<c00ea9b8>] (proc_register+0x108/0x1dc)\
+[<c00ea9b8>] (proc_register+0x108/0x1dc) from [<c00eab98>] (create_proc_entry+0x5c/0xa0)\
+[<c00eab98>] (create_proc_entry+0x5c/0xa0) from [<c0074354>] (watchdog+0x40/0xb4)\
+[<c0074354>] (watchdog+0x40/0xb4) from [<c005d95c>] (kthread+0x80/0x88)\
+[<c005d95c>] (kthread+0x80/0x88) from [<c002cac0>] (kernel_thread_exit+0x0/0x8)\
+---[ end trace 1b75b31a2719ed1c ]---\
+hi_wdt: User-Mode!\
+hi_wdt: Init sucessfull!\
+NET: Registered protocol family 16\
+id:0x51152100\
+ACP ON!\
+ACP bus = 200M!\
+L2cache cache controller enabled\
+check_res_of_trace_clock: sched_clock() high resolution\
+Serial: dw  uart driver\
+uart:0: ttyAMA0 at MMIO 0x1010e000 (irq = 77) is a AMBA/DW\
+uart:1: ttyAMA1 at MMIO 0x1010f000 (irq = 78) is a AMBA/DW\
+console [ttyAMA1] enabled\
+pcie0 sel: 0x1, pcie1 sel:0x2,pcie0 memsize:0xa00000, pcie1 memsize:0xa00000.\
+PCIE0 Device Link Up val = 0x00008038, loop = 2.\
+PCIE1 Device Link Up val = 0x00008038.\
+PCI: bus0: Fast back to back transfers disabled\
+PCI: bus1: Fast back to back transfers disabled\
+pci 0000:01:00.0: BAR 0: assigned [mem 0x58000000-0x58007fff 64bit]\
+pci 0000:01:00.0: BAR 0: set to [mem 0x58000000-0x58007fff 64bit] (PCI address [0x58000000-0x58007fff]\
+pci 0000:00:00.0: BAR 0: assigned [mem 0x40000000-0x40003fff 64bit]\
+pci 0000:00:00.0: BAR 0: set to [mem 0x40000000-0x40003fff 64bit] (PCI address [0x40000000-0x40003fff]\
+bio: create slab <bio-0> at 0\
+vgaarb: loaded\
+usbcore: registered new interface driver usbfs\
+usbcore: registered new interface driver hub\
+usbcore: registered new device driver usb\
+cfg80211: Calling CRDA to update world regulatory domain\
+Switching to clocksource timer1\
+NET: Registered protocol family 2\
+IP route cache hash table entries: 128 (order: -3, 512 bytes)\
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)\
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)\
+TCP: Hash tables configured (established 8192 bind 8192)\
+TCP reno registered\
+UDP hash table entries: 128 (order: 0, 4096 bytes)\
+UDP-Lite hash table entries: 128 (order: 0, 4096 bytes)\
+NET: Registered protocol family 1\
+RPC: Registered udp transport module.\
+RPC: Registered tcp transport module.\
+RPC: Registered tcp NFSv4.1 backchannel transport module.\
+squashfs: version 4.0 (2009/01/31) Phillip Lougher\
+JFFS2 version 2.2. \'a9 2001-2006 Red Hat, Inc.\
+msgmni has been set to 471\
+io scheduler noop registered\
+io scheduler deadline registered\
+io scheduler cfq registered (default)\
+brd: module loaded\
+mtdoops: mtd device (mtddev=name/number) must be supplied\
+Spi id table Version 1.22\
+Spi Flash Controller V300 Device Driver, Version 1.10\
+Special nand id table Version 1.33\
+Hisilicon Nand Flash Controller V301 Device Driver, Version 1.10\
+Nand ID: 0x2C 0xDA 0x90 0x95 0x06 0x00 0x00 0x00\
+Nand(Hardware): Block:128KB Page:2KB Chip:256MB OOB:64B ECC:4Bytes \
+NAND device: Manufacturer ID: 0x2c, Chip ID: 0xda (Micron MT29F2G08ABA)\
+NAND_ECC_NONE selected by board driver. This is not recommended !!\
+3 cmdlinepart partitions found on MTD device hinand\
+Creating 3 MTD partitions on "hinand":\
+0x000000000000-0x000000100000 : "startcode"\
+0x000000100000-0x000010000000 : "ubifs"\
+0x000010000000-0x000010000000 : "reserved"\
+mtd: partition "reserved" is out of reach -- disabled\
+UBI: attaching mtd1 to ubi0\
+UBI: physical eraseblock size:   131072 bytes (128 KiB)\
+UBI: logical eraseblock size:    126976 bytes\
+UBI: smallest flash I/O unit:    2048\
+UBI: VID header offset:          2048 (aligned 2048)\
+UBI: data offset:                4096\
+UBI: attached mtd1 to ubi0\
+UBI: MTD device name:            "ubifs"\
+UBI: MTD device size:            255 MiB\
+UBI: number of good PEBs:        2040\
+UBI: number of bad PEBs:         0\
+UBI: max. allowed volumes:       128\
+UBI: wear-leveling threshold:    512\
+UBI: number of internal volumes: 1\
+UBI: number of user volumes:     15\
+UBI: available PEBs:             36\
+UBI: total number of reserved PEBs: 2004\
+UBI: number of PEBs reserved for bad PEB handling: 40\
+UBI: max/mean erase counter: 273/230\
+UBI: image sequence number: 486549574\
+UBI: background thread "ubi_bgt0d" started, PID 44\
+PPP generic driver version 2.4.2\
+PPP Deflate Compression module registered\
+PPP BSD Compression module registered\
+PPP MPPE Compression module registered\
+NET: Registered protocol family 24\
+SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).\
+CSLIP: code copyright 1989 Regents of the University of California.\
+SLIP linefill/keepalive option.\
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver\
+hiusb_start_hcd sucessful!\
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI\
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1\
+hiusb-ehci hiusb-ehci.0: irq 71, io mem 0x10a40000\
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00\
+hub 1-0:1.0: USB hub found\
+hub 1-0:1.0: 2 ports detected\
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver\
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI\
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 2\
+hiusb-ohci hiusb-ohci.0: irq 70, io mem 0x10a50000\
+hub 2-0:1.0: USB hub found\
+hub 2-0:1.0: 2 ports detected\
+Netfilter messages via NETLINK v0.30.\
+ip_tables: (C) 2000-2006 Netfilter Core Team\
+arp_tables: (C) 2002 David S. Miller\
+TCP cubic registered\
+NET: Registered protocol family 17\
+VFS: Mounted root (squashfs filesystem) readonly on device 31:11.\
+Freeing init memory: 140K\
+\
+                        -=#  DOPRA LINUX 1.0  #=-\
+                        -=#  EchoLife WAP 0.1  #=-\
+                        -=#  Huawei Technologies Co., Ltd #=-\
+\
+mount file system\
+Loading the kernel modules: \
+Loading module: rng-core\
+Loading module: nf_conntrack\
+nf_conntrack version 0.5.0 (3777 buckets, 15108 max)\
+CONFIG_NF_CT_ACCT is deprecated and will be removed soon. Please use\
+nf_conntrack.acct=1 kernel parameter, acct=1 nf_conntrack module option or\
+sysctl net.netfilter.nf_conntrack_acct=1 to enable it.\
+Loading module: xt_mark\
+Loading module: xt_connmark\
+Loading module: xt_MARK\
+Loading module: xt_limit\
+Loading module: xt_state\
+Loading module: xt_tcpmss\
+Loading module: nf_nat\
+Loading module: ipt_MASQUERADE\
+Loading module: ipt_REDIRECT\
+Loading module: ipt_NETMAP\
+Loading module: nf_conntrack_ipv4.ko\
+Loading module: iptable_nat.ko\
+Making device instances:\
+Setting console log message level: \
+Setting hostname: \
+Settingup the sysctl configurations:\
+Setting up interface lo: \
+Running local startup scripts.\
+\
+*******************************************\
+--==        Welcome To IAS WAP         ==--\
+--==   Huawei Technologies Co., Ltd.   ==--\
+*******************************************\
+IAS WAP Ver:V800R015C00SPC106B001\
+IAS WAP Timestamp:2015/01/26 13:01:56\
+*******************************************\
+\
+/etc/rc.d/rc.start/0.wap_init.sh: line 33: CalcUsedMem: not found\
+current lastword info:Add=0xcfb01000;max_num=300;Add1=0xcfb01000;Add2=0xcfb06000;Add3=0xcfb0b000;\
+soft lockup args:snap=150; release=50; dump flag=1;\
+/etc/rc.d/rc.start/0.wap_init.sh: line 69: CalcUsedMem: not found\
+insmod: can't insert '/lib/modules/wap/hw_ssp_sys_res.ko': No such file or directory\
+UBIFS error (pid 114): mount_ubifs: fenghe.linux4.3 : space_fixup = 0\
+Set kmsgread process pid to:117;\
+Set msg reader to 117;\
+Rootfs time stamp:2015-03-06_12:05:41\
+SVN label(ont):User init start......\
+Loading the SD5115V100 modules: \
+\
+ SYSCTL module is installed\
+\
+ PIE module is installed\
+\
+ GPIO module is installed\
+\
+ I2C module is installed\
+\
+ TIMER module is installed\
+\
+ SPI module is installed\
+\
+ HW module is installed\
+\
+ UART module is installed\
+\
+ BRIDGE module is installed\
+\
+ GPON module is installed\
+\
+ EPON module is installed\
+\
+ L3 module is installed\
+\
+ OAM module is installed\
+\
+ SCI module is installed\
+ifconfig eth0 hw ether XX:XX:XX:XX:XX:XX\
+Loading the EchoLife WAP modules: LDSP\
+COMMON For LDSP Install Successfully...\
+GPIO For LDSP Install Successfully...\
+HIGHWAY For LDSP Install Successfully...\
+\
+ ------ SOC is 5115 T PILOT ------ \
+<ldsp>board version is 51\
+<ldsp>pcb version is 0\
+<ldsp>orig board version is 51\
+CHIPADP-SD5115 BASIC For LDSP Install Successfully...\
+CHIPADP-SD5115 EXT For LDSP Install Successfully...\
+I2C For LDSP Install Successfully...\
+LSW L2 For LDSP Install Successfully...\
+LSW L3 For LDSP Install Successfully...\
+DEV For LDSP Install Successfully...\
+WIFI For LDSP Install Successfully...\
+[DM]:ae_chip[0]=6,ae_chip[1]=255,ae_chip[2]=255,ae_chip[3]=0\
+[DM]:board_ver=51,pcb_ver=0\
+[hw_dm_pd_dynamic_attr_init_spec]ac_bin_word:COMMON ac_cfg_word:MOBILY2\
+hw_dm_init_data successfully...\
+\
+ [ /mnt/jffs2/boardinfocustom.cfg not exsit ! not need deal.]\
+hw_dm_pdt_init successfully...\
+hw_feature_load_ptd_info ret=0, index=0, path=/etc/wap/ft/amp/doublewlan11ac.cfg \
+hw_feature_load_ptd_info ret=0, index=1, path=/etc/wap/ft/bbsp/bin4_wifi_5115t.cfg \
+hw_feature_load_ptd_info ret=0, index=2, path=/etc/wap/ft/ssmp/HG8245v3.cfg \
+hw_feature_load_ptd_info ret=0, index=3, path=/etc/wap/ft/vspa/HG8240.cfg \
+hw_feature_load_custom_def_info acTmpBuf=/etc/wap/customize/MOBILY_ft.cfg;\
+hw_feature_load_equip_info acTmpBuf=/mnt/jffs2/hw_hardinfo_feature.bak;\
+hw_spec_load_ptd_info ret=0, index=0, path=/etc/wap/spec/amp/spec.cfg \
+hw_spec_load_ptd_info ret=0, index=1, path=/etc/wap/spec/bbsp/spec_v3_5115t_dualcore.cfg \
+hw_spec_load_ptd_info ret=0, index=2, path=/etc/wap/spec/ssmp/spec.cfg \
+hw_spec_load_ptd_info ret=0, index=3, path=/etc/wap/spec/vspa/spec3.cfg \
+hw_spec_load_custom_def_info acTmpBuf=/etc/wap/customize/spec_mobily.cfg;\
+hw_spec_load_equip_info ac_tmp_buf=/mnt/jffs2/hw_hardinfo_spec.bak;\
+pots_num=2\
+ usb_num=2\
+hw_route=1\
+   l3_ex=1\
+    ipv6=1\
+Read MemInfo Des: 2417\
+SPI For LDSP Install Successfully...\
+UART For LDSP Install Successfully...\
+BATTERY For LDSP Install Successfully...\
+OPTIC For LDSP Install Successfully...\
+PLOAM For LDSP Install Successfully...\
+GMAC For LDSP Install Successfully...\
+KEY For LDSP Install Successfully...\
+LED For LDSP Install Successfully...\
+RF For LDSP Install Successfully...\
+SIM For LDSP Install Successfully...\
+CODEC For LDSP Install Successfully...\
+PEF3201 For LDSP install successfully...\
+fuse init (API version 7.13)\
+SCSI subsystem initialized\
+Initializing USB Mass Storage driver...\
+usbcore: registered new interface driver usb-storage\
+USB Mass Storage support registered.\
+usbcore: registered new interface driver usblp\
+USB For LDSP Install Successfully...\
+hw_ker_pdt_usb_init successfully...\
+Loading BBSP L2 modules: \
+File:/usr1/build/CLOUD_V8R15C00_WP_WAP_SMP/code/current/WAP_V8R15C00/CI/script/../../WAP/source/bssp/l2_base/kernel/sfwd/vport/hw_ker_vport_cfg.c,Line97:uiEt4\
+File:/usr1/build/CLOUD_V8R15C00_WP_WAP_SMP/code/current/WAP_V8R15C00/CI/script/../../WAP/source/bssp/l2_base/kernel/sfwd/vport/hw_ker_vport_cfg.c,Line101:uiV0\
+File:/usr1/build/CLOUD_V8R15C00_WP_WAP_SMP/code/current/WAP_V8R15C00/CI/script/../../WAP/source/bssp/l2_base/kernel/sfwd/vport/hw_ker_vport_cfg.c,Line105:uiS8\
+File:/usr1/build/CLOUD_V8R15C00_WP_WAP_SMP/code/current/WAP_V8R15C00/CI/script/../../WAP/source/bssp/l2_base/kernel/sfwd/vport/hw_ker_vport_cfg.c,Line109:uiW8\
+File:/usr1/build/CLOUD_V8R15C00_WP_WAP_SMP/code/current/WAP_V8R15C00/CI/script/../../WAP/source/bssp/l2_base/kernel/sfwd/vport/hw_ker_vport_cfg.c,Line112:uiM6\
+PTP For BBSP Install Successfully...\
+hw_igmp_module_init ui_totalnum:29\
+hw_igmp_kernel Install Successfully...\
+\
+ dhcp_module_init load success !\
+\
+ pppoe_module_init load success !\
+hw_ringchk_kernel Install Successfully...\
+hw_portchk_kernel Install Successfully...\
+\
+ hw_socket_l2info_init load success !\
+\
+ hw_neigbour_init load success !\
+l2base For BBSP Install Successfully...\
+vbr_unicast_car:50\
+vbr_unicast_car:50\
+vbr_unicast_car:50\
+Pktdump init Install Successfully...\
+\
+ hw_cpu_usage_install\
+[ker_L2M_CTP] for bbsp Install Successfully...\
+EMAC For LDSP Install Successfully...\
+MPCP For LDSP Install Successfully...\
+Loading DSP temporary modules: \
+linux kernel dopra is installed!\
+\
+ dsp sdk  insmod success!\
+DSP For VOICE Install Successfully...\
+Loading BBSP L2_extended modules: \
+hw_ethoam_kernel Install Successfully...\
+l2ext For BBSP Install Successfully...\
+Loading BBSP L3_basic modules: \
+Bad file descriptor:195, tid:317\
+Dosflt For BBSP Install Successfully...\
+\
+ vlanflt_module_init load success !\
+l3base for bbsp Install Successfully...\
+Loading BBSP L3_extended modules: \
+arp_config_bridge_filter: \
+\
+ hw_arp_announce_module_init load success !\
+\
+ arp_module_init load success !\
+Route ipv4 for bbsp Install Successfully...\
+Neighbour discovery for bbsp Install Successfully...\
+Portal For BBSP Install Successfully...\
+\
+ hw_nat_skip_port_init success\
+\
+ Parent ctrl for bbsp Install Successfully...\
+User device for bbsp Install Successfully...\
+l3ext for bbsp Install Successfully...\
+\
+ install success\
+Loading BBSP IPv6 modules: \
+ip6_tables: (C) 2000-2006 Netfilter Core Team\
+ip6tnl0: Disabled Privacy Extensions\
+Route ipv6 for bbsp Install Successfully\
+Loading BBSP hw_rout modules: \
+insmod: can't insert '/lib/modules/wap/l3ext.ko': File exists\
+insmod: can't insert '/lib/modules/wap/wap_ipv6.ko': File exists\
+\
+[ker_ROUTE_ADPT] for bbsp Install Successfully...\
+\
+Napt PDT For BBSP Init Successfully...\
+\
+type: 0, pool: 0xcdce5620, cur:1024, max:1024\
+\
+type: 1, pool: 0xcdce5640, cur:1024, max:1024\
+\
+type: 2, pool: 0xcdce5f80, cur:2048, max:2048\
+@@@@@@ skpool_init  succeed@@@@@@\
+skpool installed ok!\
+\
+[ker_pdt_wifi] for bbsp Install Successfully...\
+Start ldsp_user...<LDSP> system has slave space for bob \
+<LDSP_CFG> Set uiUpMode=1 [1:GPON,2:EPON,4:AUTO]\
+read data is over time\
+ \
+SD511X test self OK\
+Extern Lsw test self NoCheck\
+Optic test self ERROR\
+WIFI test self OK\
+PHY[1] test self OK\
+PHY[2] test self OK\
+PHY[3] test self OK\
+PHY[4] test self OK\
+PHY[5] test self NoCheck\
+PHY[6] test self NoCheck\
+\
+<LDSP> 5171 optic \
+FILE = /usr1/code/ICP_ONT_V300R015C00_DailyCompile/code/current/ONT_V300R015C00/CI/Make/../../Source/ldsp/driver/optic/hw_ker_drv_optic.c \
+LINE =  5817, FUNC = hw_drv_optic_cal_sw_ver_set \
+<LDSP> read cal version file error \
+\
+<LDSP> bob optic was calibrated \
+read data is over time\
+ \
+read data is over time\
+ \
+read data is over time\
+ \
+<LDSP> optic firmware load success! \
+GPON init success ! \
+ssmp bbsp igmp amp ethoam oamomci voice wifi cwmp\
+Start SSMP...\
+Start VOICE ...Start WIFI...Start start pid=430; uiProcNum=9;\
+current soc is 5115T\
+InitFrame igmp; PID=434; state=0; 14.079;\
+InitFrame igmp; PID=434; in state=0; 14.080;\
+InitFrame igmp; PID=434; out state=0; 14.080;\
+InitFrame omci; PID=441; state=0; 14.285;\
+InitFrame omci; PID=441; in state=0; 14.285;\
+InitFrame ssmp; PID=431; state=0; 14.296;\
+InitFrame ssmp; PID=431; in state=0; 14.297;\
+InitFrame wifi; PID=442; state=0; 14.411;\
+InitFrame wifi; PID=442; in state=0; 14.411;\
+InitFrame wifi; PID=442; out state=0; 14.411;\
+<SWM>[hw_swm_flashcfg.c_1417]HW_SWM_GetMtdInfoFromDrv acDevName = /dev/dev \
+\
+InitFrame amp; PID=433; state=0; 14.466;\
+InitFrame amp; PID=433; in state=0; 14.466;\
+InitFrame amp; PID=433; out state=0; 14.467;\
+\
+ubi_open_volume error with 2, try UBI_READONLY;\
+<hw_dm_tools.c:1648>acChooseWord:NOCHOOSE UserChoiceFlag:-1 Updateflag:-1\
+\
+InitFrame omci; PID=441; out state=0; 14.751;\
+InitFrame voice_h248sip; PID=439; state=0; 14.902;\
+InitFrame voice_h248sip; PID=439; in state=0; 14.903;\
+InitFrame voice_h248sip; PID=439; out state=0; 14.903;\
+InitFrame ethoam; PID=435; state=0; 14.908;\
+InitFrame ethoam; PID=435; in state=0; 14.909;\
+InitFrame ethoam; PID=435; out state=0; 14.910;\
+InitFrame cwmp; PID=440; state=0; 15.327;\
+InitFrame cwmp; PID=440; in state=0; 15.327;\
+InitFrame cwmp; PID=440; out state=0; 15.327;\
+InitFrame bbsp; PID=432; state=0; 15.645;\
+InitFrame bbsp; PID=432; in state=0; 15.645;\
+InitFrame bbsp; PID=432; out state=0; 15.647;\
+DBCTree Init Ok!\
+<db/hw_xml_basic_dbmain.c:4293>acFilePath:/etc/wap/hw_aes_tree.xml pstRoot:0x38058bd4\
+<db/hw_xml_basic_dbmain.c:3921>Reproc db begin...\
+<db/hw_xml_basic_dbmain.c:3926>no need Reproc!\
+<db/hw_xml_basic_dbmain.c:3086>[HW_XML_DBOnceSave] Set DB Auto Save in 12000 ticks.\
+CFM begin::AppName[ssmp]\
+CFM end::AppName[ssmp] uiRet[0x0] Spend[4]ms\
+?\
+Meta-Z for help | 115200 8N1 | NOR | Minicom 2.10 | VT102 | Offline | tty.SLAB_USBtoUART                                                                     \
+}
